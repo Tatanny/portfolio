@@ -1,0 +1,9 @@
+.DS_Store
+assets/.DS_Store
+
+# Tilda helper files are kept locally, but the GitHub Pages site does not need them.
+tilda-embed.html
+tilda-embed-copy.txt
+tilda-flowly-embed.html
+tilda-flowly-embed-copy.txt
+
