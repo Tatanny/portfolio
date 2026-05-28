@@ -15,7 +15,7 @@ Use these settings:
 - Build command: empty
 - Start command: `npm start`
 
-The app uses `server.js` to serve static files and reads the port from `PORT`.
+The app uses `server.js` to serve static files. It reads the port from `PORT` and falls back to `8080`.
 
 ## Publish On GitHub Pages
 
