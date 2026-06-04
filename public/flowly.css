@@ -226,7 +226,7 @@ img {
 }
 
 .nav-links:not(.nav-links--plain) a::after {
-  content: "";
+  content: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -242,6 +242,10 @@ img {
 .nav-links:not(.nav-links--plain) a:hover::after {
   opacity: 1;
   transform: scaleX(1);
+}
+
+.nav-links:not(.nav-links--plain) a:hover {
+  color: #2d86e8 !important;
 }
 
 .nav-links--plain a.is-active {

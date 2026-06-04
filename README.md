@@ -1,4 +1,4 @@
-# Tanya Sherstneva Portfolio
+# Tanya Sherstneva
 
 Static portfolio site ready for GitHub Pages.
 
