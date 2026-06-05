@@ -70,14 +70,20 @@ img {
 }
 
 .sidebar {
-  position: sticky;
+  position: fixed;
   top: 32px;
+  left: calc((100vw - min(100vw, 1400px)) / 2 + 32px);
+  width: 316px;
   align-self: start;
   max-height: calc(100vh - 64px);
   overflow: auto;
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.content {
+  grid-column: 2;
 }
 
 .card {
@@ -850,6 +856,11 @@ img {
     padding: 20px;
   }
 
+  .sidebar {
+    left: calc((100vw - min(100vw, 1400px)) / 2 + 20px);
+    width: 280px;
+  }
+
   .profile__head p,
   .profile h1 {
     font-size: 18px;
@@ -867,7 +878,7 @@ img {
 
 @media (min-width: 901px) {
   .sidebar {
-    position: sticky;
+    position: fixed;
     top: 32px;
     align-self: start;
   }

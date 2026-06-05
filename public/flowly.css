@@ -52,12 +52,15 @@ img {
 }
 
 .case-page {
+  grid-column: 2;
   width: min(100%, 1000px);
 }
 
 .sidebar {
-  position: sticky;
+  position: fixed;
   top: 32px;
+  left: calc((100vw - min(100vw, 1400px)) / 2 + 32px);
+  width: 316px;
   align-self: start;
   max-height: calc(100vh - 64px);
   overflow: auto;
@@ -454,11 +457,16 @@ p {
     grid-template-columns: 280px minmax(0, 1fr);
     padding: 20px;
   }
+
+  .sidebar {
+    left: calc((100vw - min(100vw, 1400px)) / 2 + 20px);
+    width: 280px;
+  }
 }
 
 @media (min-width: 981px) {
   .sidebar {
-    position: sticky;
+    position: fixed;
     top: 32px;
     align-self: start;
   }
