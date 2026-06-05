@@ -7,6 +7,9 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
+    <link rel="preload" as="image" href="assets/optimized/project-flowly-cover-left.jpg" media="(min-width: 681px)" />
+    <link rel="preload" as="image" href="assets/optimized/project-flowly-cover-right.jpg" media="(min-width: 681px)" />
+    <link rel="preload" as="image" href="assets/optimized/mobile-cover-flowly.jpg" media="(max-width: 680px)" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -14,7 +17,7 @@
       <aside class="sidebar" aria-label="Информация о дизайнере">
         <section class="profile card">
           <div class="profile__head">
-            <img class="profile__avatar" src="assets/profile-avatar.png" alt="Tanya Sherstneva" />
+            <img class="profile__avatar" src="assets/optimized/profile-avatar.jpg" width="102" height="128" alt="Tanya Sherstneva" />
             <div>
               <h1>Tanya Sherstneva</h1>
               <p>Product designer</p>
@@ -63,12 +66,12 @@
         <article class="project project--flowy">
           <a class="project-media-grid project-media-link flowly-hover-zone" href="flowly.html" aria-label="Открыть проект Flowly">
             <div class="project-media-slot project-media-slot--cover project-media-slot--flowy project-media-slot--flowy-cover">
-              <img class="project-mobile-cover" src="assets/mobile-cover-flowly.png" alt="Flowly mobile cover preview" />
+              <img class="project-mobile-cover" src="assets/optimized/mobile-cover-flowly.jpg" width="900" height="532" alt="Flowly mobile cover preview" />
               <div class="flowy-cover-mockup flowy-cover-mockup--main">
-                <img src="assets/project-flowly-cover-left.png" alt="Flowly main screen preview" />
+                <img src="assets/optimized/project-flowly-cover-left.jpg" width="895" height="1700" alt="Flowly main screen preview" fetchpriority="high" />
               </div>
               <div class="flowy-cover-mockup flowy-cover-mockup--secondary">
-                <img src="assets/project-flowly-cover-right.png" alt="Flowly operations screen preview" />
+                <img src="assets/optimized/project-flowly-cover-right.jpg" width="895" height="1700" alt="Flowly operations screen preview" fetchpriority="high" />
               </div>
             </div>
           </a>
@@ -91,12 +94,12 @@
         <article class="project project--atlas" id="atlas">
           <div class="project-media-grid atlas-hover-zone">
             <div class="project-media-slot project-media-slot--cover project-media-slot--atlas project-media-slot--atlas-cover">
-              <img class="project-mobile-cover" src="assets/mobile-cover-atlas.png" alt="Atlas mobile cover preview" />
+              <img class="project-mobile-cover" src="assets/optimized/mobile-cover-atlas.jpg" width="900" height="532" alt="Atlas mobile cover preview" loading="lazy" />
               <div class="atlas-cover-mockup atlas-cover-mockup--main">
-                <img src="assets/project-atlas-cover-left.png" alt="Atlas project main preview" />
+                <img src="assets/optimized/project-atlas-cover-left.jpg" width="790" height="1500" alt="Atlas project main preview" loading="lazy" />
               </div>
               <div class="atlas-cover-mockup atlas-cover-mockup--secondary">
-                <img src="assets/project-atlas-cover-right.png" alt="Atlas project detail preview" />
+                <img src="assets/optimized/project-atlas-cover-right.jpg" width="790" height="1500" alt="Atlas project detail preview" loading="lazy" />
               </div>
             </div>
           </div>
@@ -117,14 +120,14 @@
         </article>
 
         <section class="case-grid" id="concepts" aria-label="Галерея концептов">
-          <figure class="case-card case-card--short"><img src="assets/concept-01-reading-app.png" alt="Reader" /><figcaption class="case-chip">Reader</figcaption></figure>
-          <figure class="case-card case-card--short"><img src="assets/concept-02-messaging-app.png" alt="Messenger" /><figcaption class="case-chip">Messenger</figcaption></figure>
-          <figure class="case-card case-card--tall"><img src="assets/concept-06-task-manager-app.png" alt="Task Manager" /><figcaption class="case-chip">Task Manager</figcaption></figure>
-          <figure class="case-card case-card--tall"><img src="assets/concept-04-streaming-app.png" alt="Online Cinema" /><figcaption class="case-chip">Online Cinema</figcaption></figure>
-          <figure class="case-card case-card--tall"><img src="assets/concept-05-android-news-app.png" alt="Android News Portal" /><figcaption class="case-chip">Android News Portal</figcaption></figure>
-          <figure class="case-card case-card--tall"><img src="assets/concept-07-task-manager-app.png" alt="Task Manager" /><figcaption class="case-chip">Task Manager</figcaption></figure>
-          <figure class="case-card case-card--tall"><img src="assets/concept-03-messaging-app.png" alt="Messenger" /><figcaption class="case-chip">Messenger</figcaption></figure>
-          <figure class="case-card case-card--tall"><img src="assets/concept-08-fintech-app.png" alt="Finance Manager" /><figcaption class="case-chip">Finance Manager</figcaption></figure>
+          <figure class="case-card case-card--short"><img src="assets/optimized/concept-01-reading-app.jpg" width="1023" height="1100" loading="lazy" alt="Reader" /><figcaption class="case-chip">Reader</figcaption></figure>
+          <figure class="case-card case-card--short"><img src="assets/optimized/concept-02-messaging-app.jpg" width="1023" height="1100" loading="lazy" alt="Messenger" /><figcaption class="case-chip">Messenger</figcaption></figure>
+          <figure class="case-card case-card--tall"><img src="assets/optimized/concept-06-task-manager-app.jpg" width="1023" height="1100" loading="lazy" alt="Task Manager" /><figcaption class="case-chip">Task Manager</figcaption></figure>
+          <figure class="case-card case-card--tall"><img src="assets/optimized/concept-04-streaming-app.jpg" width="1023" height="1100" loading="lazy" alt="Online Cinema" /><figcaption class="case-chip">Online Cinema</figcaption></figure>
+          <figure class="case-card case-card--tall"><img src="assets/optimized/concept-05-android-news-app.jpg" width="1023" height="1100" loading="lazy" alt="Android News Portal" /><figcaption class="case-chip">Android News Portal</figcaption></figure>
+          <figure class="case-card case-card--tall"><img src="assets/optimized/concept-07-task-manager-app.jpg" width="1023" height="1100" loading="lazy" alt="Task Manager" /><figcaption class="case-chip">Task Manager</figcaption></figure>
+          <figure class="case-card case-card--tall"><img src="assets/optimized/concept-03-messaging-app.jpg" width="1023" height="1100" loading="lazy" alt="Messenger" /><figcaption class="case-chip">Messenger</figcaption></figure>
+          <figure class="case-card case-card--tall"><img src="assets/optimized/concept-08-fintech-app.jpg" width="1023" height="1100" loading="lazy" alt="Finance Manager" /><figcaption class="case-chip">Finance Manager</figcaption></figure>
         </section>
       </section>
     </main>
