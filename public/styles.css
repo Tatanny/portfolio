@@ -72,6 +72,7 @@ img {
 .sidebar {
   position: sticky;
   top: 32px;
+  align-self: start;
   max-height: calc(100vh - 64px);
   overflow: auto;
   display: flex;
@@ -861,6 +862,14 @@ img {
 
   .project-media-grid {
     height: 520px;
+  }
+}
+
+@media (min-width: 901px) {
+  .sidebar {
+    position: sticky;
+    top: 32px;
+    align-self: start;
   }
 }
 
