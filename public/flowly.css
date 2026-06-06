@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 :root {
   --page: #f6f6f6;
   --text: #3b3b3b;
@@ -24,7 +26,7 @@ body {
   background-size: 16px 16px;
   background-attachment: fixed;
   color: var(--text);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0;
@@ -111,21 +113,21 @@ img {
   color: var(--text);
   font-size: 18px;
   line-height: 1.12;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .profile__head p {
   margin-top: 4px;
   color: var(--muted);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.12;
 }
 
 .profile__copy {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 8px;
   color: #444;
   font-size: 18px;
   line-height: 22px;
@@ -307,7 +309,7 @@ p {
   padding: 32px 20px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: 12px;
   align-self: stretch;
   margin-top: 8px;
   background: #eeeeee;
@@ -362,15 +364,16 @@ p {
 .jbtd-grid h3,
 .hypothesis-grid h3,
 .next-project span {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .case-info p,
 .case-note p,
-.jbtd-grid p {
+.jbtd-grid p,
+.hypothesis-grid p {
   color: #444;
   font-size: 18px;
-  line-height: 25px;
+  line-height: 24px;
 }
 
 .jtbd-copy span {
@@ -378,10 +381,13 @@ p {
 }
 
 .jtbd-copy span + span {
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
-.hypothesis-grid p,
+.jtbd-copy strong {
+  font-weight: 700;
+}
+
 .next-project strong {
   color: #444;
   font-size: 17px;
@@ -433,23 +439,34 @@ p {
   margin: 0;
   display: grid;
   place-items: center;
-  min-height: 590px;
   overflow: hidden;
   border-radius: var(--radius);
   background: #eeeeee;
 }
 
+.mockup-card {
+  height: 590px;
+  min-height: 590px;
+}
+
+.image-card {
+  min-height: 590px;
+}
+
 .mockup-grid--three .mockup-card {
-  min-height: 413px;
+  height: 590px;
+  min-height: 590px;
 }
 
 .mockup-grid--case-screens .mockup-card {
-  min-height: 520px;
+  height: 590px;
+  min-height: 590px;
 }
 
 .mockup-card img {
-  width: 261.862px;
-  height: 538.845px;
+  width: auto;
+  height: 590px;
+  max-width: 100%;
   flex-shrink: 0;
   object-fit: contain;
   filter: drop-shadow(0 16px 26px rgba(30, 45, 70, 0.18));
@@ -478,7 +495,9 @@ p {
 }
 
 .image-card--ui-kit {
-  aspect-ratio: 1800 / 1169;
+  aspect-ratio: auto;
+  height: auto;
+  min-height: auto;
 }
 
 .image-card--wide img {
@@ -486,6 +505,12 @@ p {
   height: 100%;
   object-fit: cover;
   filter: none;
+}
+
+.image-card--ui-kit img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .image-card--empty {
@@ -496,94 +521,39 @@ p {
   padding: 24px;
 }
 
+.competitor-analysis-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.competitor-analysis-card h3 {
+  margin-bottom: 0;
+}
+
 .competitor-logos {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 8px;
-  padding: 20px;
-  border-radius: var(--radius);
-  background: #eeeeee;
+  margin-top: 0;
 }
 
 .competitor-logo {
   display: inline-grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
+  width: 60px;
+  height: 60px;
   overflow: hidden;
   border-radius: 12px;
   background: #ffffff;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
 }
 
-.competitor-logo::before {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 7px;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.competitor-logo--coinkeeper::before {
-  content: "C";
-  background: linear-gradient(135deg, #1fc777, #0c8f54);
-}
-
-.competitor-logo--zenmoney::before {
-  content: "";
-  background: radial-gradient(circle at 50% 50%, #ffffff 0 25%, transparent 27%),
-    conic-gradient(#ff5f55 0 25%, #ffd34d 0 50%, #42c77c 0 75%, #4a8dff 0);
-}
-
-.competitor-logo--finance::before {
-  content: "₽";
-  background: linear-gradient(135deg, #ffb82e, #ff7a1a);
-}
-
-.competitor-logo--moneyflow::before {
-  content: "$";
-  background: linear-gradient(135deg, #6f7bff, #8d4dff);
-}
-
-.competitor-logo--dzen::before {
-  content: "";
-  border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, #111111 0 32%, transparent 34%),
-    conic-gradient(#111111 0 25%, #ffffff 0 50%, #111111 0 75%, #ffffff 0);
-}
-
-.competitor-logo--tbank::before {
-  content: "T";
-  background: linear-gradient(135deg, #ffe15a, #f3bd19);
-  color: #333333;
-}
-
-.competitor-logo--alfa::before {
-  content: "A";
-  background: linear-gradient(135deg, #ef3124, #d81616);
-}
-
-.competitor-logo--sber::before {
-  content: "";
-  background: radial-gradient(circle at 65% 35%, #ffffff 0 14%, transparent 16%),
-    conic-gradient(from -45deg, #22a947 0 78%, #ffffff 0 88%, #22a947 0);
-}
-
-.competitor-logo--mts::before {
-  content: "";
-  border-radius: 50% 50% 44% 44%;
-  background: linear-gradient(135deg, #ff2b2b, #e30613);
-}
-
-.competitor-logo--monobank::before {
-  content: "M";
-  background: linear-gradient(135deg, #ff69b4, #785bff);
+.competitor-logo img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
 .hypothesis-grid {
@@ -606,6 +576,28 @@ p {
 .next-project span,
 .next-project strong {
   grid-column: 1;
+}
+
+.next-project__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: #444;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.next-project__title span {
+  display: inline;
+  margin-bottom: 0;
+  color: inherit;
+  font: inherit;
+}
+
+.next-project__title span:last-child {
+  color: #8a8a8a;
 }
 
 .next-project__tags {
@@ -631,6 +623,10 @@ p {
 .next-project:hover strong,
 .next-project:hover span {
   color: inherit;
+}
+
+.next-project:hover .next-project__title span:last-child {
+  color: #8a8a8a;
 }
 
 @media (max-width: 1180px) {
@@ -722,10 +718,16 @@ p {
     aspect-ratio: 494 / 531;
   }
 
+  .mockup-card {
+    height: 590px;
+    min-height: 590px;
+    aspect-ratio: auto;
+  }
+
   .mockup-card img {
-    width: min(70vw, 261.862px);
-    height: auto;
-    max-height: 538.845px;
+    width: auto;
+    height: min(130vw, 590px);
+    max-width: 100%;
   }
 
   .image-card img {
@@ -734,6 +736,12 @@ p {
 
   .image-card--wide {
     aspect-ratio: 494 / 291;
+  }
+
+  .image-card--ui-kit {
+    height: auto;
+    min-height: auto;
+    aspect-ratio: 996 / 647;
   }
 
   .next-project {

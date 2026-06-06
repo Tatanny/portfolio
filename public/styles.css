@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 :root {
   --page: #f6f6f6;
   --text: #3b3b3b;
@@ -26,7 +28,7 @@ body {
   background-size: 16px 16px;
   background-attachment: fixed;
   color: var(--text);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0;
