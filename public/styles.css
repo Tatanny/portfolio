@@ -137,8 +137,8 @@ img {
 }
 
 .profile__avatar-wrap:hover .profile__avatar--hover {
-  opacity: 1;
-  transform: scale(1.03);
+  opacity: 1 !important;
+  transform: none;
 }
 
 @media (hover: none) {
@@ -175,7 +175,7 @@ img {
 .profile__copy {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 8px;
   color: #444;
   font-size: 18px;
   font-weight: 500;
@@ -351,12 +351,14 @@ img {
   flex-direction: column;
   gap: 64px;
   width: min(100%, 1000px);
+  scroll-margin-top: 32px;
 }
 
 .project {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  scroll-margin-top: 32px;
 }
 
 .hero-grid {
@@ -474,14 +476,14 @@ img {
 
 .atlas-cover-mockup--main {
   left: 13%;
-  top: 10%;
+  top: 13%;
   width: 40%;
   --atlas-hover-y: -16px;
 }
 
 .atlas-cover-mockup--secondary {
   right: 13%;
-  top: -35%;
+  top: -28%;
   width: 40%;
   --atlas-hover-y: 16px;
 }
