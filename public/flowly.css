@@ -55,7 +55,7 @@ img {
 
 .case-page {
   grid-column: 2;
-  width: min(100%, 996px);
+  width: min(100%, 1000px);
 }
 
 .sidebar {
@@ -91,17 +91,48 @@ img {
   margin-bottom: 20px;
 }
 
-.profile__avatar {
+.profile__avatar-wrap {
+  position: relative;
   width: 50px;
   height: 50px;
   flex: 0 0 50px;
+  display: block;
+  overflow: hidden;
   border-radius: 9px;
-  object-fit: cover;
-  transition: transform 180ms ease;
 }
 
-.profile__avatar:hover {
-  transform: scale(1.04);
+.profile__avatar {
+  position: absolute;
+  inset: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 9px;
+  object-fit: cover;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.profile__avatar--hover {
+  opacity: 0;
+}
+
+.profile__avatar-wrap:hover .profile__avatar--base {
+  opacity: 0;
+}
+
+.profile__avatar-wrap:hover .profile__avatar--hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+@media (hover: none) {
+  .profile__avatar-wrap:hover .profile__avatar--base {
+    opacity: 1;
+  }
+
+  .profile__avatar-wrap:hover .profile__avatar--hover {
+    opacity: 0;
+    transform: none;
+  }
 }
 
 .profile h1,
@@ -292,7 +323,7 @@ p {
 .case-cover {
   margin: 0;
   overflow: hidden;
-  aspect-ratio: 1800 / 1066;
+  height: 590px;
   border-radius: var(--radius);
   background: #4aa4ff;
 }
@@ -384,8 +415,8 @@ p {
   margin-top: 8px;
 }
 
-.jtbd-copy strong {
-  font-weight: 700;
+.hypothesis-copy span {
+  display: block;
 }
 
 .next-project strong {
@@ -467,8 +498,12 @@ p {
   width: auto;
   height: 590px;
   max-width: 100%;
+  justify-self: center;
+  align-self: center;
   flex-shrink: 0;
   object-fit: contain;
+  object-position: center;
+  transform: translateX(1.5px);
   filter: drop-shadow(0 16px 26px rgba(30, 45, 70, 0.18));
 }
 
@@ -536,17 +571,19 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 0;
+  margin-top: 12px;
 }
 
 .competitor-logo {
+  position: relative;
   display: inline-grid;
   place-items: center;
   width: 60px;
   height: 60px;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 12px;
   background: #ffffff;
+  outline: none;
 }
 
 .competitor-logo img {
@@ -554,6 +591,38 @@ p {
   width: 60px;
   height: 60px;
   object-fit: contain;
+}
+
+.competitor-logo::after {
+  content: attr(aria-label);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  z-index: 5;
+  width: max-content;
+  max-width: 180px;
+  padding: 6px 9px;
+  border-radius: 8px;
+  background: rgba(36, 36, 36, 0.78);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 4px);
+  transition: opacity 150ms ease, transform 150ms ease;
+  white-space: nowrap;
+}
+
+.competitor-logo::before {
+  content: none;
+}
+
+.competitor-logo:hover::after,
+.competitor-logo:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .hypothesis-grid {

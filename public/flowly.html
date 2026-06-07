@@ -15,7 +15,10 @@
       <aside class="sidebar" aria-label="Информация о дизайнере">
         <section class="profile card">
           <div class="profile__head">
-            <img class="profile__avatar" src="assets/optimized/profile-avatar.jpg" width="102" height="128" alt="Tanya Sherstneva" />
+            <span class="profile__avatar-wrap">
+              <img class="profile__avatar profile__avatar--base" src="assets/optimized/profile-avatar.jpg" width="102" height="128" alt="Tanya Sherstneva" />
+              <img class="profile__avatar profile__avatar--hover" src="assets/optimized/profile-avatar-hover.jpg" width="205" height="256" alt="" aria-hidden="true" />
+            </span>
             <div>
               <h1>Tanya Sherstneva</h1>
               <p>Product designer</p>
@@ -73,7 +76,8 @@
             <span>iOS</span>
             <span>FinTech</span>
             <span>B2C</span>
-            <span>Потоки</span>
+            <span>JTBD</span>
+            <span>Гипотезы</span>
             <span>Анализ конкурентов</span>
           </div>
         </section>
@@ -109,25 +113,25 @@
           <article class="card">
             <h3>JTBD 1</h3>
             <p class="jtbd-copy">
-              <span><strong>Когда</strong> я&nbsp;хочу накопить на&nbsp;отпуск, технику, подушку безопасности или крупную покупку,</span>
-              <span><strong>Я&nbsp;хочу</strong> видеть цель и&nbsp;прогресс выполнения,</span>
-              <span><strong>чтобы</strong> двигаться к&nbsp;ней без ощущения, что это невозможно.</span>
+              <span>Когда я&nbsp;хочу накопить на&nbsp;отпуск, технику, подушку безопасности или крупную покупку,</span>
+              <span>я&nbsp;хочу видеть цель и&nbsp;прогресс выполнения,</span>
+              <span>чтобы двигаться к&nbsp;ней без ощущения, что это невозможно</span>
             </p>
           </article>
           <article class="card">
             <h3>JTBD 2</h3>
             <p class="jtbd-copy">
-              <span><strong>Когда</strong> я&nbsp;в&nbsp;конце месяца не&nbsp;понимаю, почему денег осталось меньше, чем ожидала,</span>
-              <span><strong>Я&nbsp;хочу</strong> увидеть свои расходы по&nbsp;категориям,</span>
-              <span><strong>чтобы</strong> понять, где я&nbsp;теряю деньги и&nbsp;что можно изменить.</span>
+              <span>Когда я&nbsp;в&nbsp;конце месяца не&nbsp;понимаю, почему денег осталось меньше, чем ожидала,</span>
+              <span>я&nbsp;хочу увидеть свои расходы по&nbsp;категориям,</span>
+              <span>чтобы понять, где я&nbsp;теряю деньги и&nbsp;что можно изменить</span>
             </p>
           </article>
           <article class="card">
             <h3>JTBD 3</h3>
             <p class="jtbd-copy">
-              <span><strong>Когда</strong> я&nbsp;стараюсь больше осознанно обращаться с&nbsp;финансами,</span>
-              <span><strong>Я&nbsp;хочу</strong> видеть реальные изменения в&nbsp;своих привычках,</span>
-              <span><strong>чтобы</strong> понимать, что мои усилия дают результат.</span>
+              <span>Когда я&nbsp;стараюсь более осознанно и&nbsp;внимательно обращаться с&nbsp;денежными средствами,</span>
+              <span>я&nbsp;хочу видеть реальные изменения в&nbsp;привычках,</span>
+              <span>чтобы понимать, что мои усилия дают результат</span>
             </p>
           </article>
         </section>
@@ -145,17 +149,17 @@
           </p>
 
           <div class="competitor-logos" aria-label="Сервисы для анализа">
-            <span class="competitor-logo"><img src="assets/flowly/competitors/coinkeeper.png" width="120" height="120" loading="lazy" alt="CoinKeeper" /></span>
-            <span class="competitor-logo"><img src="assets/flowly/competitors/zen-money.png" width="120" height="120" loading="lazy" alt="Дзен-мани" /></span>
-            <span class="competitor-logo"><img src="assets/flowly/competitors/finance.png" width="120" height="120" loading="lazy" alt="Финансы" /></span>
-            <span class="competitor-logo"><img src="assets/flowly/competitors/money-flow.png" width="120" height="120" loading="lazy" alt="Money Flow" /></span>
-            <span class="competitor-logo"><img src="assets/flowly/competitors/raiffeisen.png" width="120" height="120" loading="lazy" alt="Райффайзен Банк" /></span>
-            <span class="competitor-logo"><img src="assets/flowly/competitors/alfa-bank.png" width="120" height="120" loading="lazy" alt="Альфа Банк" /></span>
-            <span class="competitor-logo"><img src="assets/flowly/competitors/ozon-bank.png" width="120" height="120" loading="lazy" alt="Ozon Банк" /></span>
-            <span class="competitor-logo"><img src="assets/flowly/competitors/t-bank.png" width="120" height="120" loading="lazy" alt="T-Банк" /></span>
-            <span class="competitor-logo"><img src="assets/flowly/competitors/yandex-pay.png" width="120" height="120" loading="lazy" alt="Яндекс Пэй" /></span>
-            <span class="competitor-logo"><img src="assets/flowly/competitors/sber.png" width="120" height="120" loading="lazy" alt="Сбер" /></span>
-            <span class="competitor-logo"><img src="assets/flowly/competitors/mtbank-moby.png" width="120" height="120" loading="lazy" alt="МТБанк Moby" /></span>
+            <span class="competitor-logo" aria-label="CoinKeeper" tabindex="0"><img src="assets/flowly/competitors/coinkeeper.png" width="120" height="120" loading="lazy" alt="CoinKeeper" /></span>
+            <span class="competitor-logo" aria-label="Дзен-мани" tabindex="0"><img src="assets/flowly/competitors/zen-money.png" width="120" height="120" loading="lazy" alt="Дзен-мани" /></span>
+            <span class="competitor-logo" aria-label="Финансы" tabindex="0"><img src="assets/flowly/competitors/finance.png" width="120" height="120" loading="lazy" alt="Финансы" /></span>
+            <span class="competitor-logo" aria-label="Money Flow" tabindex="0"><img src="assets/flowly/competitors/money-flow.png" width="120" height="120" loading="lazy" alt="Money Flow" /></span>
+            <span class="competitor-logo" aria-label="Райффайзен Банк" tabindex="0"><img src="assets/flowly/competitors/raiffeisen.png" width="120" height="120" loading="lazy" alt="Райффайзен Банк" /></span>
+            <span class="competitor-logo" aria-label="Альфа Банк" tabindex="0"><img src="assets/flowly/competitors/alfa-bank.png" width="120" height="120" loading="lazy" alt="Альфа Банк" /></span>
+            <span class="competitor-logo" aria-label="Ozon Банк" tabindex="0"><img src="assets/flowly/competitors/ozon-bank.png" width="120" height="120" loading="lazy" alt="Ozon Банк" /></span>
+            <span class="competitor-logo" aria-label="T-Банк" tabindex="0"><img src="assets/flowly/competitors/t-bank.png" width="120" height="120" loading="lazy" alt="T-Банк" /></span>
+            <span class="competitor-logo" aria-label="Яндекс Пэй" tabindex="0"><img src="assets/flowly/competitors/yandex-pay.png" width="120" height="120" loading="lazy" alt="Яндекс Пэй" /></span>
+            <span class="competitor-logo" aria-label="Сбер" tabindex="0"><img src="assets/flowly/competitors/sber.png" width="120" height="120" loading="lazy" alt="Сбер" /></span>
+            <span class="competitor-logo" aria-label="МТБанк Moby" tabindex="0"><img src="assets/flowly/competitors/mtbank-moby.png" width="120" height="120" loading="lazy" alt="МТБанк Moby" /></span>
           </div>
         </section>
 
@@ -164,10 +168,23 @@
         </figure>
 
         <section class="hypothesis-grid" aria-label="Гипотезы">
-          <article class="card"><h3>Гипотеза 1</h3><p>Если пользователь будет получать ежедневные инсайты на&nbsp;основе своих финансовых привычек, это мотивирует регулярно возвращаться в&nbsp;приложение.</p></article>
-          <article class="card"><h3>Гипотеза 2</h3><p>Если графики доходов и&nbsp;расходов будут простыми и&nbsp;понятными, пользователи лучше поймут свои финансовые привычки.</p></article>
-          <article class="card"><h3>Гипотеза 3</h3><p>Если добавить финансовые цели и&nbsp;прогресс накоплений, пользователи будут более мотивированы откладывать деньги.</p></article>
-          <article class="card"><h3>Гипотеза 4</h3><p>Если пользователь видит все расходы и&nbsp;доходы в&nbsp;одном месте, он&nbsp;лучше контролирует бюджет.</p></article>
+          <article class="card">
+            <h3>Гипотеза 1</h3>
+            <p class="hypothesis-copy">
+              <span>Если пользователь будет получать ежедневные инсайты на&nbsp;основе своих финансовых привычек,</span>
+              <span>это мотивирует регулярно возвращаться</span>
+              <span>в&nbsp;приложение</span>
+            </p>
+          </article>
+          <article class="card"><h3>Гипотеза 2</h3><p>Если графики доходов и&nbsp;расходов будут простыми и&nbsp;понятными, пользователи лучше поймут свои финансовые привычки</p></article>
+          <article class="card"><h3>Гипотеза 3</h3><p>Если добавить финансовые цели и&nbsp;прогресс накоплений, пользователи будут более мотивированы откладывать деньги</p></article>
+          <article class="card">
+            <h3>Гипотеза 4</h3>
+            <p class="hypothesis-copy">
+              <span>Если пользователь видит все расходы и&nbsp;доходы</span>
+              <span>в&nbsp;одном месте, он&nbsp;лучше контролирует бюджет</span>
+            </p>
+          </article>
         </section>
 
         <section class="mockup-grid mockup-grid--three" aria-label="Графики Flowly">
@@ -180,7 +197,7 @@
           <h3>GPT</h3>
           <p>
             С&nbsp;помощью GPT я&nbsp;проанализировала свои финансовые привычки, что позволило определить,
-            какие рекомендации и&nbsp;инсайты будут наиболее полезны пользователям.
+            какие рекомендации и&nbsp;инсайты будут наиболее полезны пользователям
           </p>
         </section>
 
@@ -197,9 +214,9 @@
         <section class="case-note card">
           <h3>Результат</h3>
           <p>
-            Подготовила MVP к&nbsp;запуску: разработала UX/UI, провела UX-тесты и&nbsp;доработала сценарии
-            на&nbsp;основе обратной связи. Финальный продукт помогает пользователям следить за&nbsp;бюджетом
-            и&nbsp;возвращаться к&nbsp;нему снова.
+            Подготовила MVP к&nbsp;запуску: спроектировала ключевые пользовательские сценарии, провела
+            UX-тестирование и&nbsp;итеративно улучшила продукт на&nbsp;основе обратной связи. В&nbsp;результате
+            создала сервис, который упрощает управление личными финансами и&nbsp;стимулирует регулярное использование
           </p>
         </section>
 
