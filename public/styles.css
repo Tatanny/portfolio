@@ -212,6 +212,7 @@ img {
 .profile .chips span {
   padding: 4px 8px;
   border-radius: 12px;
+  background: #f2f2f2;
   color: #5e5e5e;
   font-weight: 500;
 }
