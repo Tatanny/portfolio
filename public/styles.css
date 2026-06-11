@@ -476,16 +476,16 @@ img {
 }
 
 .atlas-cover-mockup--main {
-  left: 13%;
-  top: 13%;
-  width: 40%;
+  left: 14%;
+  top: 10%;
+  width: 39%;
   --atlas-hover-y: -16px;
 }
 
 .atlas-cover-mockup--secondary {
-  right: 13%;
-  top: -28%;
-  width: 40%;
+  right: 14%;
+  top: -25%;
+  width: 39%;
   --atlas-hover-y: 16px;
 }
 
