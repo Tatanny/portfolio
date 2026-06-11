@@ -404,6 +404,7 @@ img {
 
 .project-media-slot--cover {
   grid-column: 1 / -1;
+  aspect-ratio: 996 / 589;
 }
 
 .project-mobile-cover {
