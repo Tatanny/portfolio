@@ -164,6 +164,13 @@ img {
   color: var(--text);
 }
 
+.profile__name-link {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
 .profile__head p {
   margin-top: 4px;
   font-size: 18px;

@@ -149,6 +149,13 @@ img {
   font-weight: 600;
 }
 
+.profile__name-link {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
 .profile__head p {
   margin-top: 4px;
   color: var(--muted);
@@ -828,10 +835,30 @@ p {
     aspect-ratio: 494 / 291;
   }
 
+  .image-card--pan {
+    display: block;
+    aspect-ratio: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .image-card--pan img {
+    display: block;
+    width: clamp(760px, 190%, 920px);
+    max-width: none;
+    height: auto;
+    min-height: 100%;
+  }
+
   .image-card--ui-kit {
     height: auto;
     min-height: auto;
     aspect-ratio: 996 / 647;
+  }
+
+  .image-card--ui-kit.image-card--pan {
+    aspect-ratio: auto;
   }
 
   .next-project {
