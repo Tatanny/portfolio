@@ -845,7 +845,7 @@ p {
 
   .image-card--pan img {
     display: block;
-    width: clamp(760px, 190%, 920px);
+    width: clamp(1120px, 285%, 1320px);
     max-width: none;
     height: auto;
     min-height: 100%;
