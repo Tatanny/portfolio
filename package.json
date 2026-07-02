@@ -2,6 +2,9 @@
   "name": "tanya-portfolio",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "echo \"Static site is already built in public\"",
     "start": "node server.js"
