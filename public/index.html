@@ -68,7 +68,7 @@
 
       <section class="content" id="projects">
         <article class="project project--flowy">
-          <a class="project-media-grid project-media-link flowly-hover-zone" href="flowly/" aria-label="Открыть проект Flowly">
+          <a class="project-media-grid project-media-link flowly-hover-zone" href="flowly/index.html" aria-label="Открыть проект Flowly">
             <div class="project-media-slot project-media-slot--cover project-media-slot--flowy project-media-slot--flowy-cover">
               <img class="project-mobile-cover" src="assets/optimized/mobile-cover-flowly.jpg" width="900" height="532" alt="Flowly mobile cover preview" />
               <div class="flowy-cover-mockup flowy-cover-mockup--main">
@@ -81,10 +81,9 @@
           </a>
 
           <footer class="project-meta">
-            <a href="flowly/" class="project-title">
+            <a href="flowly/index.html" class="project-title">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
-              <span>Flowly.</span>
-              <span>Приложение по&nbsp;управлению личными финансами</span>
+              <span>MVP приложения для&nbsp;управления личными финансами</span>
             </a>
             <div class="chips chips--small">
               <span>2026</span>
@@ -96,7 +95,7 @@
         </article>
 
         <article class="project project--atlas" id="atlas">
-          <a class="project-media-grid project-media-link atlas-hover-zone" href="atlas/" aria-label="Открыть проект Atlas">
+          <a class="project-media-grid project-media-link atlas-hover-zone" href="atlas/index.html" aria-label="Открыть проект Atlas">
             <div class="project-media-slot project-media-slot--cover project-media-slot--atlas project-media-slot--atlas-cover">
               <img class="project-mobile-cover" src="assets/optimized/mobile-cover-atlas.jpg" width="900" height="532" alt="Atlas mobile cover preview" loading="lazy" />
               <div class="atlas-cover-mockup atlas-cover-mockup--main">
@@ -109,16 +108,38 @@
           </a>
 
           <footer class="project-meta">
-            <a href="atlas/" class="project-title">
+            <a href="atlas/index.html" class="project-title">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
-              <span>Atlas.</span>
-              <span>Приложение для&nbsp;размещения объявлений</span>
+              <span>От поиска до&nbsp;покупки: сценарии сервиса объявлений</span>
             </a>
             <div class="chips chips--small">
               <span>2025</span>
               <span>Mobile</span>
               <span>iOS</span>
               <span>eCom</span>
+            </div>
+          </footer>
+        </article>
+
+        <article class="project project--notifications" id="notifications">
+          <a class="project-media-grid project-media-link notifications-hover-zone" href="notifications/index.html" aria-label="Открыть проект Notifications">
+            <div class="project-media-slot project-media-slot--cover project-media-slot--notifications">
+              <img class="project-mobile-cover" src="assets/optimized/mobile-notifications-cover.jpg" width="900" height="533" alt="Notifications mobile cover preview" loading="lazy" />
+              <div class="notifications-cover-frame">
+                <img class="notifications-cover-image" src="assets/optimized/notifications-cover.png" width="2766" height="1695" alt="Notifications project cover preview" loading="lazy" />
+              </div>
+            </div>
+          </a>
+
+          <footer class="project-meta">
+            <a href="notifications/index.html" class="project-title">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+              <span>Система уведомлений для&nbsp;B2B-платформы</span>
+            </a>
+            <div class="chips chips--small">
+              <span>2024</span>
+              <span>Web</span>
+              <span>SaaS</span>
             </div>
           </footer>
         </article>
@@ -141,13 +162,18 @@
     <div class="custom-cursor atlas-cursor" aria-hidden="true">
       <img src="assets/cursor-atlas.png" alt="" />
     </div>
+    <div class="custom-cursor notifications-cursor" aria-hidden="true">
+      <img src="assets/notifications-cursor.png" alt="" />
+    </div>
     <script src="home-link.js" defer></script>
     <script>
       (() => {
         const flowlyCursor = document.querySelector(".flowly-cursor");
         const atlasCursor = document.querySelector(".atlas-cursor");
+        const notificationsCursor = document.querySelector(".notifications-cursor");
         const flowlyZone = document.querySelector(".flowly-hover-zone");
         const atlasZone = document.querySelector(".atlas-hover-zone");
+        const notificationsZone = document.querySelector(".notifications-hover-zone");
         const mediaGrids = document.querySelectorAll(".project-media-grid");
         const navLinks = [...document.querySelectorAll('.nav-links--plain a[href^="#"]')];
         const sections = navLinks
@@ -213,6 +239,9 @@
               });
               return;
             }
+            if (grid === notificationsZone) {
+              return;
+            }
             images.forEach((image, index) => {
               const offset = drift[index] || { x: 0, y: 0 };
               const slot = image.closest(".project-media-slot");
@@ -223,7 +252,7 @@
           });
 
           grid.addEventListener("mousemove", (event) => {
-            const activeCursor = grid === flowlyZone ? flowlyCursor : grid === atlasZone ? atlasCursor : null;
+            const activeCursor = grid === flowlyZone ? flowlyCursor : grid === atlasZone ? atlasCursor : grid === notificationsZone ? notificationsCursor : null;
           if (activeCursor) {
             activeCursor.classList.add("is-visible");
             move(activeCursor, event, grid);
@@ -242,12 +271,22 @@
                 mockup.classList.remove("is-hovered");
               });
             }
+            if (grid === notificationsZone) {
+              images.forEach((image) => {
+                image.style.transform = "";
+              });
+              flowlyCursor?.classList.remove("is-visible");
+              atlasCursor?.classList.remove("is-visible");
+              notificationsCursor?.classList.remove("is-visible");
+              return;
+            }
             images.forEach((image) => {
               image.style.transform = "";
             });
 
             flowlyCursor?.classList.remove("is-visible");
             atlasCursor?.classList.remove("is-visible");
+            notificationsCursor?.classList.remove("is-visible");
           });
         });
       })();
