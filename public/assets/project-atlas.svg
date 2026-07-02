@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="590" viewBox="0 0 1000 590" fill="none">
+  <rect width="1000" height="590" rx="12" fill="#E8E8E8"/>
+  <path d="M0 0H1000V590H0V0Z" fill="url(#dots)"/>
+  <rect x="365" y="235" width="270" height="120" rx="18" fill="white"/>
+  <text x="500" y="287" text-anchor="middle" fill="#3B3B3B" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">Atlas image</text>
+  <text x="500" y="321" text-anchor="middle" fill="#9E9E9E" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="500">replace this placeholder</text>
+  <defs>
+    <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#3B3B3B" fill-opacity=".08"/>
+    </pattern>
+  </defs>
+</svg>
