@@ -176,6 +176,33 @@ img {
   line-height: 22px;
 }
 
+.typewriter-copy {
+  min-height: 66px;
+}
+
+.typewriter-copy.is-typing::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 3px;
+  background: currentColor;
+  vertical-align: -0.12em;
+  animation: typewriter-caret 780ms steps(1, end) infinite;
+}
+
+@keyframes typewriter-caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriter-copy.is-typing::after {
+    animation: none;
+  }
+}
+
 .profile > .chips {
   gap: 6px;
   justify-content: flex-start;
