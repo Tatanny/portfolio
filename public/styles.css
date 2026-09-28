@@ -193,7 +193,7 @@ img {
 }
 
 .typewriter-copy {
-  min-height: 44px;
+  min-height: 66px;
 }
 
 .typewriter-copy.is-typing::after {
