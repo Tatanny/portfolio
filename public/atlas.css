@@ -698,6 +698,8 @@ p {
 .next-project__title svg {
   width: 20px;
   height: 20px;
+  flex: 0 0 20px;
+  margin-top: 4px;
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
@@ -708,7 +710,7 @@ p {
 
 .next-project__title {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
   min-width: 0;
   color: #444;
@@ -732,7 +734,7 @@ p {
   grid-column: 2;
   grid-row: 2;
   margin-top: 0;
-  align-self: end;
+  align-self: start;
   justify-self: end;
 }
 
