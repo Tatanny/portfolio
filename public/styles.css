@@ -377,6 +377,8 @@ img {
 .project-title svg {
   width: 20px;
   height: 20px;
+  flex: 0 0 20px;
+  margin-top: 4px;
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
@@ -881,14 +883,14 @@ img {
 
 .project-meta {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
 }
 
 .project-title {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
   min-width: 0;
   color: var(--text);

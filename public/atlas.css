@@ -917,3 +917,24 @@ p {
     justify-self: start;
   }
 }
+
+/* Hover magnifier for the Atlas user flow. */
+@media (min-width: 981px) and (hover: hover) and (pointer: fine) {
+  [data-flow-zoom] img { cursor: zoom-in; }
+  [data-flow-zoom] img.is-magnifying { cursor: none; }
+}
+
+.flow-magnifier {
+  position: fixed;
+  z-index: 1000;
+  display: none;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-sizing: content-box;
+  background-color: #eee;
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.24), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+
+.flow-magnifier.is-visible { display: block; }
