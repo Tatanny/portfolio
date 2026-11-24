@@ -21,7 +21,7 @@ const mimeTypes = {
 const server = http.createServer((request, response) => {
   const url = new URL(request.url, `http://${request.headers.host}`);
   const cleanPath = decodeURIComponent(url.pathname).replace(/^\/+/, "");
-  const requestedPath = cleanPath || "index.html";
+  const requestedPath = /^cv_ru\/?$/.test(cleanPath) ? "resume/PD_Tatyana_Sherstneva.pdf" : cleanPath || "index.html";
   const filePath = path.join(root, requestedPath);
 
   if (!filePath.startsWith(root)) {
