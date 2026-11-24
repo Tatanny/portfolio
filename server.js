@@ -6,6 +6,7 @@ const port = Number(process.env.PORT) || 8080;
 const root = fs.existsSync(path.join(__dirname, "public")) ? path.join(__dirname, "public") : __dirname;
 
 const mimeTypes = {
+  ".pdf": "application/pdf",
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
@@ -40,7 +41,12 @@ const server = http.createServer((request, response) => {
       }
 
       const ext = path.extname(finalPath).toLowerCase();
-      response.writeHead(200, { "Content-Type": mimeTypes[ext] || "application/octet-stream" });
+      const headers = { "Content-Type": mimeTypes[ext] || "application/octet-stream" };
+      if (ext === ".pdf") {
+        headers["Content-Disposition"] = "inline";
+        headers["X-Robots-Tag"] = "noindex, nofollow, noarchive";
+      }
+      response.writeHead(200, headers);
       response.end(content);
     });
   });
