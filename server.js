@@ -6,7 +6,6 @@ const port = Number(process.env.PORT) || 8080;
 const root = fs.existsSync(path.join(__dirname, "public")) ? path.join(__dirname, "public") : __dirname;
 
 const mimeTypes = {
-  ".pdf": "application/pdf",
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
@@ -21,7 +20,7 @@ const mimeTypes = {
 const server = http.createServer((request, response) => {
   const url = new URL(request.url, `http://${request.headers.host}`);
   const cleanPath = decodeURIComponent(url.pathname).replace(/^\/+/, "");
-  const requestedPath = /^cv_ru\/?$/.test(cleanPath) ? "resume/PD_Tatyana_Sherstneva.pdf" : cleanPath || "index.html";
+  const requestedPath = cleanPath || "index.html";
   const filePath = path.join(root, requestedPath);
 
   if (!filePath.startsWith(root)) {
@@ -41,12 +40,7 @@ const server = http.createServer((request, response) => {
       }
 
       const ext = path.extname(finalPath).toLowerCase();
-      const headers = { "Content-Type": mimeTypes[ext] || "application/octet-stream" };
-      if (ext === ".pdf") {
-        headers["Content-Disposition"] = "inline";
-        headers["X-Robots-Tag"] = "noindex, nofollow, noarchive";
-      }
-      response.writeHead(200, headers);
+      response.writeHead(200, { "Content-Type": mimeTypes[ext] || "application/octet-stream" });
       response.end(content);
     });
   });
